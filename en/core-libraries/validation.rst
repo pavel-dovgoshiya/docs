@@ -148,6 +148,13 @@ like::
         ->ascii('username')
         ->lengthBetween('username', [4, 8]);
 
+
+For validate multiple options::
+   
+    $validator->multipleOptions($field, ['in'=>array_keys($options)]);
+    
+Where $options is list of id=>name for form select or multiple checkbox.
+
 See the `Validator API documentation
 <https://api.cakephp.org/3.x/class-Cake.Validation.Validator.html>`_ for the
 full set of validator methods.
@@ -319,8 +326,6 @@ required, since it would also be needed when canceling a subscription.
 
 .. versionadded:: 3.1.1
     The callable support for ``requirePresence()`` was added in 3.1.1
-
-
 
 Marking Rules as the Last to Run
 --------------------------------
